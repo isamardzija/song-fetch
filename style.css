@@ -1,0 +1,69 @@
+@keyframes pojavljivanje {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes rotacija {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+body {
+  display: flex;
+  background: #fc5c7d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #6a82fb,
+    #fc5c7d
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #6a82fb,
+    #fc5c7d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+input {
+  align-self: flex-start;
+  min-width: 400px;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  animation-name: pojavljivanje;
+  animation-duration: 1s;
+  padding-block: 0.2rem;
+}
+
+strong {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.hide {
+  display: none;
+}
+
+#loading {
+  height: 80px;
+  width: 80px;
+  border: 10px dotted black;
+  border-radius: 100%;
+  margin-block: 20px;
+  animation: rotacija 3s infinite linear;
+}
