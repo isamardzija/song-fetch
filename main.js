@@ -13,13 +13,13 @@ function potrazi() {
 
 async function dohvati() {
   errorMessage.classList.add("hide");
+  resultsContainer.innerHTML = "";
   loading.classList.toggle("hide");
 
   let input = searchField.value;
   const endpoint = `https://itunes.apple.com/search?term=${input}`;
   let response = await fetch(endpoint);
   let data = await response.json();
-  resultsContainer.innerHTML = "";
 
   setTimeout(() => {
     if (data.resultCount === 0) {

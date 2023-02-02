@@ -18,6 +18,9 @@
 
 body {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #fc5c7d; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -35,8 +38,7 @@ body {
 }
 
 input {
-  align-self: flex-start;
-  min-width: 400px;
+  width: min(80vw, 400px);
   padding: 1rem;
   font-size: 1.2rem;
 }
@@ -49,6 +51,7 @@ li {
   animation-name: pojavljivanje;
   animation-duration: 1s;
   padding-block: 0.2rem;
+  text-align: center;
 }
 
 strong {
