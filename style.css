@@ -67,6 +67,12 @@ li {
   animation-name: pojavljivanje;
   animation-duration: 1s;
   width: fit-content;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  display: flex;
+  padding: 1rem 2rem;
+  align-items: center;
+  gap: 1rem;
 }
 
 .hide {
@@ -83,7 +89,7 @@ li {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 

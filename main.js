@@ -36,15 +36,17 @@ async function dohvati() {
     } else {
       loading.classList.add("hide");
       data.results.forEach((song, i) => {
-        console.log(song);
         // ovaj setTimeout samo daje efekat da se pjesme na DOMU dodaju jedna za drugom, a ne sve istovremeno
         // također neobvezan
         setTimeout(() => {
           let li = document.createElement("li");
           let a = document.createElement("a");
+          let img = document.createElement("img");
           a.innerHTML = `<strong>${song.artistName}</strong> - ${song.trackName}`;
           a.href = song.trackViewUrl;
+          img.src = song.artworkUrl100;
           resultsContainer.appendChild(li);
+          li.appendChild(img);
           li.appendChild(a);
         }, i * 30);
       });
