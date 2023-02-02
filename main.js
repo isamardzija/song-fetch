@@ -42,7 +42,7 @@ async function dohvati() {
         setTimeout(() => {
           let li = document.createElement("li");
           let a = document.createElement("a");
-          a.textContent = `${song.artistName} - ${song.trackName}`;
+          a.innerHTML = `<strong>${song.artistName}</strong> - ${song.trackName}`;
           a.href = song.trackViewUrl;
           resultsContainer.appendChild(li);
           li.appendChild(a);

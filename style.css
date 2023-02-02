@@ -23,7 +23,6 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background: #fc5c7d; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -39,11 +38,11 @@ body {
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
-  padding: 2rem;
+  padding-block: 2rem;
 }
 
 input {
-  width: min(80vw, 400px);
+  width: min(400px, 80%);
   padding: 1rem;
   font-size: 1.2rem;
   background-color: rgb(242, 242, 242, 0.5);
@@ -58,17 +57,16 @@ input:is(:active, :hover, :focus) {
 
 ul {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 li {
   animation-name: pojavljivanje;
   animation-duration: 1s;
-  padding-block: 0.2rem;
-  text-align: center;
-}
-
-strong {
-  background-color: rgba(0, 0, 0, 0.1);
+  width: fit-content;
 }
 
 .hide {
